@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <!-- first alias -->
+    <!--
+    <servlet>
+        <servlet-name>Servlet2</servlet-name>
+        <servlet-class>Controller.Servlet2</servlet-class>
+    </servlet>
+    -->
+    <!-- second alias that is used in the code -->
+    <!--
+    <servlet-mapping>
+        <servlet-name>Servlet2</servlet-name>
+        <url-pattern>/Servlet2</url-pattern>
+    </servlet-mapping>
+    -->
+    <servlet>
+        <servlet-name>CRUDControl</servlet-name>
+        <servlet-class>Controller.CRUDController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CRUDControl</servlet-name>
+        <url-pattern>/CRUD</url-pattern>
+    </servlet-mapping>
+    
+    <!-- Need one of these blocks for every paramter -->
+    <!-- aka username, pw, etc... -->
+    <!--
+    <context-param>
+        <pparam-name>url string</pparam-name>
+        <param-value>jdbc:myswl://localhost:3006/mydb</param-value>
+    </context-param>
+    <context-param>
+        <pparam-name>username</pparam-name>
+        <param-value>advhava</param-value>
+    </context-param>
+    <context-param>
+        <pparam-name>password</pparam-name>
+        <param-value>advjava</param-value>
+    </context-param>
+    -->
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
